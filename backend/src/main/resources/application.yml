@@ -1,13 +1,13 @@
 server:
-  port: 8086
+  port: ${PORT:8086}
 
 spring:
   application:
     name: clinica-backend
   datasource:
-    url: jdbc:postgresql://localhost:5438/clinica_db
-    username: postgres
-    password: postgres
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5438/clinica_db}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:postgres}
   jpa:
     hibernate:
       ddl-auto: update
